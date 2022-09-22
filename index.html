@@ -13,8 +13,7 @@
 </head>
 
 <body>
-
-    <div class="nav">
+    <div class="ecran">
         <nav class="navbar dark-mode" role="navigation">
             <div class="navbar__logo">Logo</div>
             <ul class="navbar__links">
@@ -27,12 +26,9 @@
                 <span class="bar"></span>
             </button>
         </nav>
-        <!-- <main class="main-content" role="navigation">
-            <h1>Menu Responsive avec Burger </h1>
-        </main> -->
-    </div>
 
-    <div class="ecran">
+
+
         <div class="carte" data-tilt>
             <img src="Media/Profil.png">
             <h2>Maïwenn TANGUY</h2>
@@ -47,6 +43,16 @@
     </div>
 
     <script src="vanilla-tilt.js"></script>
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            const burger = document.querySelector('.burger');
+            burger.addEventListener('click', () => {
+                navbar.classList.toggle('show-nav');
+            })
+        }
+        toggleMenu();
+    </script>
 </body>
 
 </html>
